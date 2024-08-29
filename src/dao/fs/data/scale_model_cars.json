@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Dodge Polara RT scale 1:43",
+        "price": 15.000,
+        "img": "https://firebasestorage.googleapis.com/v0/b/e-commerce-back01.appspot.com/o/dodge-polara-rt-1-7a333404807cc6588117127705295282-640-0.webp?alt=media&token=73261728-1eb9-45fd-a7cd-1242207a79ef",
+        "stock": 10,
+        "brand": "Dodge",
+        "category": "Car"
+    },
+    {
+        "name": "Ford F100 1982 scale 1:16",
+        "price": 30.000,
+        "img": "https://firebasestorage.googleapis.com/v0/b/e-commerce-back01.appspot.com/o/ford-f-100-1982-1-d5baca2c388ddecf1f17127711865493-1024-1024.webp?alt=media&token=372f1bc7-2e01-49d2-bf9a-2582a3cdbc90",
+        "stock": 2,
+        "brand": "Ford",
+        "category": "Truck"
+    },
+    {
+        "name": "Chevrolet C10 Silverado scale 1:16",
+        "price": 32.000,
+        "img": "https://firebasestorage.googleapis.com/v0/b/e-commerce-back01.appspot.com/o/chevrolet-silverado-2-e6b5ec18818995ceff17127706231307-1024-1024.webp?alt=media&token=9d236adc-29b0-4b26-a8e5-6b9558939f79",
+        "stock": 4,
+        "brand": "Chevrolet",
+        "category": "Truck"
+    },
+    {
+        "name": "Ford Taunus GT SP5 scale 1:43",
+        "price": 16.000,
+        "img": "https://firebasestorage.googleapis.com/v0/b/e-commerce-back01.appspot.com/o/ford-taunus-gt-sp5-1-fc3f96e3eb7c02c24617127672201695-640-0.webp?alt=media&token=3874a58f-d588-437b-859f-609141c6c292",
+        "stock": 1,
+        "brand": "Ford",
+        "category": "Car"
+    },
+    {
+        "name": "IKA Baquetano 1000 scale 1:43",
+        "price": 12.000,
+        "img": "https://firebasestorage.googleapis.com/v0/b/e-commerce-back01.appspot.com/o/ika-baqueano-1000-1-30e48354dcd209b7f617127678240472-640-0.webp?alt=media&token=c3039940-b1c5-45dc-a67b-2c893dc5585d",
+        "stock": 20,
+        "brand": "IKA",
+        "category": "Truck"
+    },
+    {
+        "name": "Renault Fuego GTA MAX scale 1:43",
+        "price": 20.000,
+        "img": "https://firebasestorage.googleapis.com/v0/b/e-commerce-back01.appspot.com/o/coupe-fuego-gta-max-1-8281b3b293439e32b417127704572064-640-0.webp?alt=media&token=08d7f9bf-b715-4bd6-a4e7-c9c628420059",
+        "stock": 1,
+        "brand": "Renault",
+        "category": "Car"
+    },
+    {
+        "name": "Fiat 128 scale 1:43",
+        "price": 15.000,
+        "img": "https://firebasestorage.googleapis.com/v0/b/e-commerce-back01.appspot.com/o/fiat-128-europa-1-d16e632d6dc2229cbd17127702053290-640-0.webp?alt=media&token=855cfcfd-3fb8-40c9-89d3-24590ba614b3",
+        "stock": 6,
+        "brand": "Fiat",
+        "category": "Car"   
+    }
+]
