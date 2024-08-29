@@ -7,6 +7,11 @@ const PUERTO = 8080;
 import "./database.js"
 
 
+//managers
+import ProductManager from "./dao/db/products-manager-db.js";
+const manager = new ProductManager();
+
+
 //middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
