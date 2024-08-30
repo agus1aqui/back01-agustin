@@ -1,4 +1,4 @@
-import productsModel from "../models/products.models.js"
+import ProductsModel from "../models/products.models.js"
 
 
 class ProductManager {
@@ -11,12 +11,12 @@ class ProductManager {
                 throw new Error('All fields are required')
                 return;
             }
-            const existingProduct = await productsModel.findOne({ code: code });
+            const existingProduct = await ProductsModel.findOne({ code: code });
             if (existingProduct) {
                 throw new Error('Product already exists')
                 return;
             }
-            const newProduct = new productsModel({ name, price, img, stock, brand, category, code, status: true });
+            const newProduct = new ProductsModel({ name, price, img, stock, brand, category, code, status: true });
             await newProduct.save();
         } catch (error) {
             console.error("Error adding product:", error);
@@ -25,7 +25,7 @@ class ProductManager {
     //get
     async getProducts() {
         try {
-            const arrayProducts = await productsModel.find();
+            const arrayProducts = await ProductsModel.find();
             return arrayProducts;
         } catch (error) {
             console.error("Error getting products:", error);
@@ -34,7 +34,7 @@ class ProductManager {
     //get by Id
     async getProductsByID(id) {
         try {
-            const product = await productsModel.findById(id);
+            const product = await ProductsModel.findById(id);
             if (!product) {
                 throw new Error(`Product with ID ${id} not found`);
             }
@@ -47,7 +47,7 @@ class ProductManager {
     //update
     async updateProduct(id, updatedProduct) {
         try {
-            const updated = await productsModel.findByIdAndUpdate(id, updatedProduct);
+            const updated = await ProductsModel.findByIdAndUpdate(id, updatedProduct);
             if (!updated) {
                 throw new Error(`Product with ID ${id} not found`);
             }
@@ -59,7 +59,7 @@ class ProductManager {
     //delete
     async deleteProduct(id) {
         try {
-            const deleted = await productsModel.findByIdAndDelete(id);
+            const deleted = await ProductsModel.findByIdAndDelete(id);
             if (!deleted) {
                 throw new Error(`Product with ID ${id} not found`);
             }

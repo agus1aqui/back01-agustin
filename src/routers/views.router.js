@@ -1,17 +1,33 @@
 import express from "express";
 import { Router } from "express";
 const router = Router();
-import ProductManager from "../dao/db/products-manager-db.js";
-const productManager = new ProductManager();
+import ProductsModel from "../dao/models/products.models.js";
+
+const productManager = new ProductsModel();
+
+
+router.get('/', (req, res) => {
+    res.render('index');
+});
 
 
 router.get('/products', async (req, res) => {
-    const products = await productManager.getProducts();
-    res.render('home', { products });
-})
+    try {
+        const products = await productManager.getProducts();
+        res.render('index', { products });
+    } catch (error) {
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
+
 
 router.get('/realtimeproducts', async (req, res) => {
-    res.render('realTimeProducts', { products });
-})
+    try {
+        const products = await productManager.getProducts();
+        res.render('realtimeproducts', { products });
+    } catch (error) {
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
 
 export default router;
