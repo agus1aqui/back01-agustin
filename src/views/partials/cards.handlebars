@@ -9,3 +9,13 @@
     </div>
     {{/each}}
 </div>
+
+<div class="pagination">
+    {{#if pagination.hasPrevPage}}
+    <a href="?page={{pagination.prevPage}}&limit={{pagination.limit}}">Previous</a>
+    {{/if}}
+
+    {{#if pagination.hasNextPage}}
+    <a href="?page={{pagination.nextPage}}&limit={{pagination.limit}}">Next</a>
+    {{/if}}
+</div>

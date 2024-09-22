@@ -1,9 +1,7 @@
 import CartModel from "../models/cart.models.js";
 
 class CartManager {
-
-
-    //create
+ 
     async createCart() {
         try {
             const newCart = new CartModel({ products: [] });
@@ -11,36 +9,41 @@ class CartManager {
             return newCart;
         } catch (error) {
             console.error("Error creating cart:", error);
+            throw error; 
         }
     }
-    //return id
-    async getCartById(id) {
+
+    async getCartById(cartId) {
         try {
             const cart = await CartModel.findById(cartId);
 
             if (!cart) {
-                throw new Error(`Cart with ID ${id} not found`);
+                throw new Error(`Cart with ID ${cartId} not found`); 
             }
             return cart;
         } catch (error) {
             console.error("Error getting cart by ID:", error);
+            throw error; 
         }
     }
-    //add product to cart
+
+  
     async addProductToCart(cartId, productId, quantity = 1) {
         try {
             const cart = await this.getCartById(cartId);
-            const existingProduct = carrito.products.find(item => item.product.toString() === productId);
+            const existingProduct = cart.products.find(item => item.product.toString() === productId);
+
             if (existingProduct) {
                 existingProduct.quantity += quantity;
             } else {
                 cart.products.push({ product: productId, quantity });
             }
-            cart.markModified('products');
-            await cart.save();
+
+            await cart.save(); 
             return cart;
         } catch (error) {
             console.error("Error adding product to cart:", error);
+            throw error; 
         }
     }
 }
